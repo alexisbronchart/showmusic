@@ -30,6 +30,11 @@ struct PlayListsScreenView: View {
                         }
                     }
                 }
+                .overlay {
+                    if isLoading {
+                        ProgressView()
+                    }
+                }
             case .empty:
                 Spacer()
             }
